@@ -1,0 +1,76 @@
+// base/_reset.scss
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; // 1em = 16px
+  -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape while allowing user zoom
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; // Remove the default blue color for links
+}
+
+img {
+  max-width: 100%;
+  display: block; // Remove the space beneath images
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; // Ensure inputs use the default font
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+// Prevent iOS click highlighting
+a,
+button,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
