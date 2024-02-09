@@ -1,11 +1,25 @@
 // COLORS 
 $primary-color: #3C4142;
-$accent-color: #07A84E;
+$accentColor-primary: #07A84E;
+$accentColor-secondary: #F3F43A;
 $text-light: white;
 $text-dark: $primary-color;
 
 // SPACING
+$gap-sm: 10px;
+$gap-md: 20px;
+$gap-lg: 40px;
+$gap-xl: 80px;
+
+
+
+//  SIDES
 $desktop-sides: 40px;
+$mobile-sides: 20px;
+
+
+
+
 
 // BREAKPOINT SIZES
 $breakpoint-sm: 576px; // Small devices (phones)

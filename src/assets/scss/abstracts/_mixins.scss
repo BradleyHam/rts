@@ -1,3 +1,5 @@
+@import './variables';
+
 // Mixin for responding to screen sizes
 @mixin respond-to($breakpoint) {
     @if $breakpoint == sm {

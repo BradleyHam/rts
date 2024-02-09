@@ -1,0 +1,10 @@
+@import '../../assets/scss/abstracts/variables';
+
+.button-primary{
+    background: linear-gradient(to bottom right, $accentColor-primary, $accentColor-secondary);
+    margin-top: $gap-lg;
+    border: none;
+    font-family: 'Poppins';
+    color: $primary-color;
+    text-transform: capitalize;
+}

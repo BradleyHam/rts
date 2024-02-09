@@ -1,0 +1,24 @@
+
+@import '../../../assets/scss/abstracts/variables';
+@import '../../../assets/scss/abstracts/mixins';
+
+.hero-section{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, $primary-color 30%, #3c4142cf), url('../../../assets/images/waterBubblingonConcrete.jpg');
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 $mobile-sides;
+}
+.hero-content{
+    @include respond-to('md'){
+        max-width: 70%;
+        margin: auto;
+    }
+    @include respond-to('xl'){
+        max-width: 50%;
+        margin: auto;
+    }
+}
