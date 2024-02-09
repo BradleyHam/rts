@@ -1,0 +1,57 @@
+@import '../../assets/scss/abstracts/variables';
+
+$card-padding: 7px;
+
+.service-card{
+    height: 400px;
+    width: 100%;
+    background-color: $transformation-image-background;
+    position: relative;
+    h3{
+        z-index: 10;
+        position: absolute;
+        bottom: $gap-md;
+        left: $gap-md;
+    }
+}
+
+.service-image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    object-fit: cover;
+    z-index: 1;
+    padding: $card-padding 0;
+}
+.service-button{
+    position: absolute;
+    z-index: 20;
+    bottom:20px;
+    right: 20px;
+    border-radius: 100px;
+    padding: 0;
+    border: none;
+    padding: 5px;
+    background-color: $accentColor-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.single-image{
+    padding: $card-padding;
+}
+.right-positioned{
+    object-position: right center;
+}
+.service-card::after{
+    content: '';
+    display: block;
+    top: 0;
+    right:0;
+    bottom: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.526);
+    z-index: 5;
+    position: absolute;
+}
