@@ -1,0 +1,58 @@
+@import '../../../assets/scss/abstracts/variables';
+@import '../../../assets/scss/abstracts/mixins';
+
+.aboutSection{
+    min-height: 100vh;
+    background: $primary-color;
+    background-size: cover;
+    background-position: center;
+    padding: $gap-xl $mobile-sides;
+    display: flex; 
+    flex-flow: column;
+    justify-content: center;
+    color: white;
+    position: relative;
+    &-content{
+        @include respond-to('lg'){
+            width: 50%;
+            margin-left: 50%;
+        }
+
+    }
+   
+    .about-image{
+        height: 300px;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.269)), url('../../../assets/images/liamPowerWashing.jpeg');
+        background-size: cover;
+        background-position: center;
+        margin-bottom: $gap-md;
+        @include respond-to('lg'){
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            opacity: 1;
+            
+            background: linear-gradient(to right, rgba(60, 65, 66, 0.227), rgba(60, 65, 66, 1) 70%), url('../../../assets/images/liamPowerWashing.jpeg');
+            background-size: 150%;
+            background-position: calc(100% + 70px);
+        }
+        @include respond-to('xl'){
+            background-size: 150%;
+            background-position: calc(100% + 70px);
+        }
+
+    }
+
+    h2{
+        position: relative;
+        z-index:2;
+    }
+    p{
+        position: relative;
+        z-index:2;
+    }
+}

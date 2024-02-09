@@ -8,9 +8,21 @@ h1{
     font-size: 32px;
     margin-bottom: $gap-sm;
 }
-
+h2.h2-small{
+    font-family: 'Montserrat';
+    color: $accentColor-primary;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+h2.h2-large{
+    font-family: 'Poppins';
+    font-size: 26px;
+    margin: $gap-md 0;
+}
 p{
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 18px;
+    line-height: 1.5;
 }
