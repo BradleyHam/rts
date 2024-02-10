@@ -12,9 +12,13 @@ $gap-md: 20px;
 $gap-lg: 40px;
 $gap-xl: 80px;
 
-//  SIDES
+// SPACING - SIDES
 $desktop-sides: 40px;
 $mobile-sides: 20px;
+
+// SPACING - TOPS/BOTTOMS
+$section-gutter-y--mobile: $gap-xl;
+$section-gutter-x--mobile: $gap-md;
 
 // BREAKPOINT SIZES
 $breakpoint-sm: 576px; // Small devices (phones)

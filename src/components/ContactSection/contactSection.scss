@@ -1,0 +1,44 @@
+@import '../../assets/scss/abstracts/variables';
+@import '../../assets/scss/abstracts/mixins';
+
+.contact-section{
+    background: $primary-color;
+    @include respond-to('md'){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+}
+.contact-information{
+    padding: $section-gutter-y--mobile $section-gutter-x--mobile;
+    flex-grow: 1;
+}
+.contact-people{
+    margin-bottom: $gap-md;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+}
+.contact-name{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    margin-bottom: $gap-sm;
+    text-transform: capitalize;
+}
+.insta img{
+    height: 30px;
+    width: 30px;
+}
+.facebook img{
+    height: 36px
+}
+
+.contact-method-icon{
+    height: 20px
+}
+.contact-method{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: .8;
+}

@@ -1,0 +1,32 @@
+@import '../../assets/scss/abstracts/variables';
+@import '../../assets/scss/abstracts/mixins';
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    background: lighten($primary-color, 5%);
+    flex-grow: 2;
+    padding: $section-gutter-x--mobile;
+    height: 80%;
+    @include respond-to('md'){
+        margin: 40px;
+    }
+    h3{
+        margin-bottom: $gap-md;
+    }
+    input, textarea{
+        padding:10px;
+        background-color: lighten($primary-color, 10%);
+        border: none;
+    }
+    textarea{
+        min-height: 150px
+    }
+    input::placeholder, textarea::placeholder{
+       color: rgba(255, 255, 255, 0.845)!important; 
+    }
+    input{
+        margin-bottom: $gap-sm;
+        
+    }
+
+}
