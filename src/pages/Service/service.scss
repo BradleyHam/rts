@@ -1,0 +1,32 @@
+@import '../../assets/scss/abstracts/variables';
+@import '../../assets/scss/abstracts/mixins';
+
+.service-component{
+    background-color: $primary-color;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: calc($nav-height + $section-gutter-y--mobile) $section-gutter-x--mobile;
+    @include respond-to('lg'){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    img{
+        max-height: 300px;
+       object-fit: cover;
+      width: 100%;
+       background: white;
+       padding: 10px 0;
+       @include respond-to('lg'){
+        width: 90%;
+    }
+    }
+}
+.service-images{
+    margin-top: $gap-lg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

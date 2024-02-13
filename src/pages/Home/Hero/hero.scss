@@ -5,7 +5,7 @@
 .hero-section{
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(to bottom, $primary-color 30%, #3c4142cf), url('../../../assets/images/waterBubblingonConcrete.jpg');
+    background: linear-gradient(to bottom, $primary-color 40%, #3c4142cf), url('../../../assets/images/waterBubblingonConcrete.jpg');
     color: white;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,6 @@
     }
     @include respond-to('xl'){
         max-width: 50%;
-        margin: auto;
+        // margin: auto;
     }
 }

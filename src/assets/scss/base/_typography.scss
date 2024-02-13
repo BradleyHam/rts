@@ -7,6 +7,7 @@ h1{
     font-weight: 700;
     font-size: 32px;
     margin-bottom: $gap-sm;
+    color: white;
 }
 h2.h2-small{
     font-family: 'Montserrat';
@@ -27,6 +28,14 @@ h3{
     letter-spacing: 1px;
 }
 p{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+}
+
+li{
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 18px;

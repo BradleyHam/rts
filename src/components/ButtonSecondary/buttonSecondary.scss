@@ -1,0 +1,51 @@
+@import '../../assets/scss/abstracts/variables';
+@import '../../assets/scss/abstracts/mixins';
+
+.secondary-button{
+    margin-top:40px;
+    position: absolute;
+    
+    bottom:40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: $gap-lg;
+    p{
+      font-size: 18px;
+      font-family: 'Montserrat';
+      font-weight: bold;
+      letter-spacing: 0;
+      text-transform: capitalize;
+  
+        /* Define your gradient */
+    background: linear-gradient(to right, $accentColor-primary, $accentColor-secondary);
+    
+    /* Clip the background to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Make the text color transparent, so the gradient shows through */
+    color: transparent;
+    
+    /* Ensure the text is displayed inline or inline-block as needed */
+    display: inline-block;
+    }
+    &::after{
+      content: url('../../assets/images/double-underline\ \(1\).svg');
+      position: absolute;
+      top:100%;
+      left: 0;
+      right: 0;
+      transform: rotate(180deg);
+    }
+    @include respond-to('md'){
+      position: relative;
+      transform: translateX(0);
+      left:0;
+      bottom:0;
+    }
+  }
