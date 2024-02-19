@@ -1,0 +1,66 @@
+@import '@/assets/scss/abstracts/variables';
+@import '@/assets/scss/abstracts/mixins';
+
+.product-page-header{
+    background-color: $primary-color;
+    padding: $section-gutter-y--mobile $section-gutter-x--mobile;
+    padding-top: calc($nav-height + 60px);
+    
+   
+    h1{
+        padding: $gap-lg 0;
+        margin-bottom: 0;
+    }
+    h2{
+        opacity: .9;
+    }
+  
+    @include respond-to('lg'){
+        display: flex;
+        gap: 80px;
+    }
+}
+.text-heading-group{
+    @include respond-to('lg'){
+        border-right: 1px solid lighten($primary-color, 9%);
+        border-bottom: none;
+    }
+    @include respond-to('lg'){
+        flex: 4;
+    }
+}
+
+.border-bottom{
+    border-bottom: 1px solid lighten($primary-color, 9%);
+    @include respond-to('lg'){
+        // border-right: 1px solid lighten($primary-color, 9%);
+        border-bottom: none;
+    }
+}
+.lisenced-in-h2{
+    margin-top: $gap-lg;
+    @include respond-to('lg'){
+        margin-top: 0;
+    }
+}
+.lisenced-in{
+    flex:1;
+    width: 100%;
+    margin-top: $gap-lg;
+    @include respond-to('lg'){
+        flex:2;
+        margin-top: 0;
+    }
+}
+.lisenced-in__image-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: $gap-md;
+}
+.equus{
+    // height: 100px;
+    transform: scale(.7);
+    margin: auto;
+}

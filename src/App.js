@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import Service from './pages/Service/Service';
 import serviceData from './pages/Service/servicesData';
 import {useState} from 'react';
+import ProductPage from '@/pages/ProductPage/ProductPage'
 
 
 
@@ -30,7 +31,8 @@ const renderPage = () => {
       <header className="App-header">
         <Navbar  setCurrentPage={setCurrentPage} setCurrentService={setCurrentService}/>
       </header>
-      {renderPage()}
+      <ProductPage />
+      {/* {renderPage()} */}
     </div>
   );
 }
