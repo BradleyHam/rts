@@ -1,10 +1,29 @@
 @import '../../assets/scss/abstracts/variables';
+@import '../../assets/scss/abstracts/mixins';
 
 .button-primary{
-    background: linear-gradient(to bottom right, $accentColor-primary, $accentColor-secondary);
-    margin-top: $gap-lg;
+    background: linear-gradient(to top left, $accentColor-primary, $accentColor-secondary);
+ 
     border: none;
     font-family: 'Poppins';
     color: $primary-color;
-    text-transform: capitalize;
+    padding: 12px $gap-md;
+   
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    @include respond-to('lg'){
+        font-size: 18px;
+    }
+    button{
+        text-transform: capitalize;
+        display: flex;
+        gap: 5px;
+        color: $primary-color!important;
+    }
+}
+.phone-icon{
+    width: 25px;
+    transform: translateY(2px);
 }

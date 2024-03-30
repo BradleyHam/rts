@@ -2,21 +2,36 @@
 @import '../../assets/scss/abstracts/mixins';
 
 .contact-section{
-    background: $primary-color;
-    @include respond-to('md'){
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    background: darken($primary-color, 4%);
+    padding-bottom: $section-gutter-y--desktop;
+    .heading-container{
+        padding-bottom: 20px;
     }
+  
 }
 .contact-information{
-    padding: $section-gutter-y--mobile $section-gutter-x--mobile;
     flex-grow: 1;
+    margin: 0 $section-gutter-x--mobile;
+    @include respond-to('md'){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'people form';
+      }
+    @include respond-to('lg'){
+        margin: 0 $section-gutter-x--desktop;
+      }
 }
 .contact-people{
     margin-bottom: $gap-md;
     display: flex;
     flex-direction: column;
-    gap: $gap-md;
+    
+    grid-area: people;
+    @include respond-to('xl'){
+        flex-direction: row;
+        gap: $gap-lg;
+    }
 }
 .contact-name{
     font-size: 18px;
@@ -41,4 +56,15 @@
     align-items: center;
     gap: 10px;
     opacity: .8;
+}
+.map-view{
+    height: 350px;
+    margin: $gap-lg $section-gutter-x--mobile 0;
+    background: white;
+    @include respond-to('lg'){
+        margin: $gap-lg $section-gutter-x--desktop 0;
+    }
+}
+.contact-method{
+    padding-bottom: 5px;
 }

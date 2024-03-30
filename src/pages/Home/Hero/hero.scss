@@ -13,12 +13,15 @@
     padding: 0 $mobile-sides;
 }
 .hero-content{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
     @include respond-to('md'){
         max-width: 70%;
-        margin: auto;
+        margin: auto $desktop-sides;
     }
     @include respond-to('xl'){
-        max-width: 50%;
+        max-width: 55%;
         // margin: auto;
     }
 }

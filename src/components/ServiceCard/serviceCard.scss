@@ -18,12 +18,9 @@ $card-padding: 7px;
 .service-image{
     height: 100%;
     width: 100%;
-    position: absolute;
-    top:0;
-    object-fit: cover;
-    z-index: 1;
-    padding: $card-padding 0;
+    padding: 7px;
 }
+
 .service-button{
     position: absolute;
     z-index: 20;
@@ -38,11 +35,9 @@ $card-padding: 7px;
     justify-content: center;
     align-items: center;
 }
-.single-image{
-    padding: $card-padding;
-}
+
 .right-positioned{
-    object-position: right center;
+    object-position: center;
 }
 .service-card::after{
     content: '';

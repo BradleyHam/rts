@@ -1,0 +1,10 @@
+@import '../abstracts/mixins';
+
+.heading-container{
+    padding: 80px $section-gutter-x--mobile;
+    text-align: left;
+    // background-color: darken($primary-color, 2%);
+    @include respond-to('lg'){
+        text-align: center;
+    }
+}

@@ -18,6 +18,8 @@
     @include respond-to('lg'){
         display: flex;
         gap: 80px;
+        padding: $section-gutter-y--mobile $section-gutter-x--desktop;
+        padding-top: calc($nav-height + 60px);
     }
 }
 .text-heading-group{

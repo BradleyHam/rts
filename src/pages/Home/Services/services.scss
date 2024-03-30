@@ -1,9 +1,12 @@
 @import '../../../assets/scss/abstracts/variables';
 @import '../../../assets/scss/abstracts/mixins';
 .services{
-    padding: $gap-xl $mobile-sides;
     background: lighten($primary-color, 3%);
+    @include respond-to('lg'){
+  
+    }
 }
+
 .serviceGrid{
     display: grid;
     grid-template-columns: 1fr;

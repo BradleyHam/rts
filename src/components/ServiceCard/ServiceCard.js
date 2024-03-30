@@ -6,7 +6,6 @@ import Arrow from '../../assets/images/arrowDiagonal.svg'
 function ServiceCard(props) {
   return (
     <div className='service-card'>
-      <image src={props.imgSource}/>
       <h3>{props.serviceTitle}</h3>
       <button className='service-button'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -14,7 +13,6 @@ function ServiceCard(props) {
         </svg>
       </button>
       {props.children}
-     
     </div>
   )
 }

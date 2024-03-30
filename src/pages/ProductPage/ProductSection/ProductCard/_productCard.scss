@@ -1,7 +1,9 @@
 .product-card{
     padding: $gap-md;
-    background-color: lighten($primary-color, 20%);
-   
+    background-color: lighten($primary-color, 10%);
+    @include respond-to('md'){
+        padding: $gap-md;
+    }
 }
 
 .product-image{

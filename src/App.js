@@ -4,36 +4,35 @@ import Home from './pages/Home/Home';
 import Service from './pages/Service/Service';
 import serviceData from './pages/Service/servicesData';
 import {useState} from 'react';
-import ProductPage from '@/pages/ProductPage/ProductPage'
+import Products from '@/pages/ProductPage/ProductPage'
+import Product from '@/pages/ProductPage/ProductSection/ProductSection'
+import ScrollToTop from './components/ScrollToTop'
 
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
 const [currentPage, setCurrentPage] = useState('home');
 const [currentService, setCurrentService] = useState(null);
 
-const renderPage = () => {
-  switch (currentPage) {
-    case 'home':
-      return <Home />;
-      break;
-    case 'service':
-      const serviceObject = serviceData.find(service => service.serviceName === currentService);
-      return <Service {...serviceObject}/>;
-      break;
-    default:
-      return <Home />;  // default to Home page if currentPage is not recognized 
-      break;
-  }
-}
  return (
-    <div className="App">
-      <header className="App-header">
-        <Navbar  setCurrentPage={setCurrentPage} setCurrentService={setCurrentService}/>
-      </header>
-      <ProductPage />
-      {/* {renderPage()} */}
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="App">
+        <header className="App-header">
+          <Navbar  setCurrentPage={setCurrentPage} setCurrentService={setCurrentService}/>
+        </header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:productName" element={<Product />} />
+          {/* <Route path="/product/:productName" element={<ProductPage />} /> */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

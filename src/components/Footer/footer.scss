@@ -1,0 +1,39 @@
+@import '../../assets/scss/abstracts/variables';
+@import '../../assets/scss/abstracts/mixins';
+
+.footer{
+    background-color: $primary-color;
+}
+.footer-container{
+    padding: 60px $section-gutter-x--mobile;
+    display: flex;
+    justify-content: space-between;
+    @include respond-to('lg'){
+        padding: 60px $section-gutter-x--desktop;
+    }
+}
+
+.footer-logo{
+    width: 100px;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img{
+        height: 30px;
+    }
+}
+.instagram img{
+    transform: scale(.9);
+}
+.bottom-footer{
+    margin: 0 $section-gutter-x--mobile;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.199);
+    color: white;
+    font-family: 'Montserrat';
+    @include respond-to('lg'){
+        padding: 60px $section-gutter-x--desktop;
+    }
+}

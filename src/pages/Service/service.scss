@@ -3,24 +3,60 @@
 
 .service-component{
     background-color: $primary-color;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: calc($nav-height + $section-gutter-y--mobile) $section-gutter-x--mobile;
+    display: grid;
+    row-gap: $gap-lg;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto ;
+    grid-template-areas: 
+        'heading'
+        'image' 
+        'list'
+    ;
+    padding: $section-gutter-y--mobile $section-gutter-x--mobile;
+    padding-top: 120px;
+    
     @include respond-to('lg'){
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 40px auto;
+        padding: 120px $section-gutter-x--desktop;
+        column-gap: $gap-lg;
+        grid-template-areas: 
+        'heading image'
+        'list image'
+        ;
+    }
+
+    h3{
+        grid-area: heading;
+        margin-bottom: 0;
     }
     img{
-        max-height: 300px;
+       grid-area: image;
        object-fit: cover;
-      width: 100%;
+       width: 100%;
        background: white;
        padding: 10px 0;
        @include respond-to('lg'){
-        width: 90%;
+         max-height: 500px;
     }
     }
+}
+.service-components .service-component:nth-of-type(2n) {
+    
+    background: darken($primary-color, 3%);
+    grid-template-areas: 
+        'heading'
+        'image' 
+        'list'
+    ;
+    @include respond-to('lg'){
+        grid-template-areas: 
+            'image heading'
+            'image list'
+        ;
+    }
+   
 }
 .service-images{
     margin-top: $gap-lg;
@@ -29,4 +65,30 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    width: 100%;
+}
+.service-image img{
+  padding: 7px;
+  width: 100%;
+
+}
+
+.service-list{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    grid-area: list;
+}
+
+.service-image{
+    height: 500px;
+    width: 100%;
+    grid-area:image;
+    align-self: center;
+    img{
+        height: 100%;
+    }
+    &:last-child img{
+        object-position: right;
+    }
 }

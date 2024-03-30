@@ -21,8 +21,12 @@ nav {
   background-color: $primary-color;
   margin: 0 auto;
   position: fixed;
-  z-index: 21;
+  z-index: 10;
+
   height: $nav-height;
+  @include respond-to('lg'){
+    padding: 0 $desktop-sides;
+  }
     p, li{
       font-size: 14px;
       @include respond-to('lg'){
@@ -32,8 +36,11 @@ nav {
    li{
     cursor: pointer;
     opacity: 1;
+   
+
     &:hover{
       opacity: 1;
+     
     }
    }
    ul {
@@ -42,14 +49,14 @@ nav {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+
     
    
     a {
       text-decoration: none;
       color: $text-light;
       display: inline-block;
-      margin-bottom: $space-1;
+      
       &:hover {
         color: $hover-color;
       }
@@ -84,6 +91,7 @@ nav {
     }
   }
   .nav-menu{
+    gap: 30px;
    
     @include respond-to('md') {
        flex-direction: row;
@@ -99,15 +107,19 @@ nav {
         visibility: visible;
       }
   }
+  li:hover{
+  
+    font-weight: 600;
 
+  }
   li.has-submenu {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: flex-start;
     flex-direction: row;
     svg{
-      transform: scale(.7);
+      transform: scale(.7) translateY(6px);
  
       left: calc(100% + 5px);
     }
@@ -144,15 +156,7 @@ nav {
   }
 }
 
-button {
-  appearance: none;
-  border: 1px solid $text-light;
-  color: $text-light;
-  background-color: transparent;
-  border-radius: 10rem;
-  padding: 10px 40px;
-  cursor: pointer;
-}
+
 
 #logo{
     width: 100px
@@ -172,22 +176,22 @@ button {
   background-color: lighten($primary-color, 5%);
   padding:40px 10px;
   position: absolute;
-
-  top: 0;
+  top: -90px;
   width: 200px;
   left: calc(100% + 20px);
   display: flex!important;
   border-radius: 5px;
   text-transform: lowercase;
   margin-top: -40px;
+  
   @media (min-width: 400px){
     padding:40px 20px;
     width: 260px;
   }
   @include respond-to('md'){
     top: 80px;
-    left: 0;
-    width: 350px;
+    left: -30px;
+    width: 380px;
    
   }
  
@@ -199,3 +203,24 @@ button {
   align-items: center;
   margin-left:10px;
 }
+
+.nav-item {
+  font-weight: normal;
+ 
+}
+
+.nav-item-bold {
+  font-weight: 600;
+  // other styling
+}
+.service-item {
+  display: block;
+  padding: 10px; /* Adjust padding as needed */
+  text-decoration: none; /* optional, removes the underline */
+  color: inherit; /* optional, ensures the text color is inherited from the parent */
+  /* add other styling as needed */
+  &:hover{
+    font-weight: 500;
+  }
+}
+

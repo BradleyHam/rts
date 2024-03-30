@@ -4,14 +4,19 @@ import './index.css'
 import './assets/scss/main.scss'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { pdfjs } from 'react-pdf';
 import { BrowserRouter } from 'react-router-dom';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+
      <App />
-    </BrowserRouter>
+
   </React.StrictMode>
 );
 

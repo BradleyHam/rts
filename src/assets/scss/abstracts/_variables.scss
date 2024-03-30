@@ -1,5 +1,8 @@
 // COLORS 
 $primary-color: #3C4142;
+$primary-color-dark: #3a3f40;
+$primary-color-light: #464c4e;
+
 $accentColor-primary: #07A84E;
 $accentColor-secondary: #F3F43A;
 $text-light: white;
@@ -10,15 +13,23 @@ $transformation-image-background: #FCFCFC;
 $gap-sm: 10px;
 $gap-md: 20px;
 $gap-lg: 40px;
-$gap-xl: 80px;
+$gap-xl: 120px;
 
 // SPACING - SIDES
-$desktop-sides: 40px;
+$desktop-sides: 80px;
 $mobile-sides: 20px;
 
 // SPACING - TOPS/BOTTOMS
-$section-gutter-y--mobile: $gap-xl;
+$section-gutter-y--mobile: 80px;
 $section-gutter-x--mobile: $gap-md;
+
+$section-gutter-y--tablet: $gap-xl;
+$section-gutter-x--tablet: $gap-xl;
+
+$section-gutter-y--desktop: $gap-xl;
+$section-gutter-x--desktop: $desktop-sides;
+
+
 
 // BREAKPOINT SIZES
 $breakpoint-sm: 576px; // Small devices (phones)

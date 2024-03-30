@@ -3,29 +3,34 @@
 .contact-form{
     display: flex;
     flex-direction: column;
-    background: lighten($primary-color, 5%);
+    background: $primary-color;
+    align-items: flex-start;
     flex-grow: 2;
-    padding: $section-gutter-x--mobile;
-    height: 80%;
+    padding: $gap-lg $gap-md;
     @include respond-to('md'){
-        margin: 40px;
+        
+    }
+    @include respond-to('lg'){
+        padding: $gap-lg;
     }
     h3{
         margin-bottom: $gap-md;
     }
     input, textarea{
         padding:10px;
-        background-color: lighten($primary-color, 10%);
+        background-color: lighten($primary-color, 4%);
         border: none;
     }
     textarea{
-        min-height: 150px
+        min-height: 150px;
+        width: 100%;
     }
     input::placeholder, textarea::placeholder{
-       color: rgba(255, 255, 255, 0.845)!important; 
+       color: rgb(255, 255, 255)!important; 
     }
     input{
         margin-bottom: $gap-sm;
+        width: 100%;
         
     }
 

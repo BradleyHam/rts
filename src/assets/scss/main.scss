@@ -1,4 +1,10 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './base/base';
 @import './base/reset';
+@import './base/section';
 @import './base/typography';
 
 

@@ -1,25 +1,27 @@
 import React from 'react'
 import './service.scss';
-import image from '@/assets/images/acidWashing.jpg';
+import serviceData from '../Service/servicesData';
 
-function Service({serviceName, description, images}) {
+function Service({serviceName}) {
 
+  const currentServiceData = serviceData[serviceName]
 
   return (
-    <div className='service-component'>
-     <div>
-      <h1>
-        {serviceName}
-      </h1>
-      <p>
-        {description}
-      </p>
+    <div id={serviceName} className='service-component pt-20'>
+      
+      <h3 className='service-heading'>
+        {currentServiceData.serviceName}
+      </h3>
+      <ul className='service-list'>
+         {currentServiceData.bulletPoints.map(item => (
+           <li><strong>{item.bulletHeading}</strong><br/>{item.bulletDescription}</li>
+         ))} 
+      </ul>
+    
+      <div className='service-image'>
+        <img src={currentServiceData.image}/>
       </div>
-      <div className='service-images'>
-      {
-          images.map((image, index) => <img src={image} key={index} />)
-      }
-      </div>
+  
     </div>
   )
 }

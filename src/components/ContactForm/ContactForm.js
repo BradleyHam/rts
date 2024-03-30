@@ -27,7 +27,7 @@ function ContactForm() {
 
   return (
     <form className='contact-form' onSubmit={handleSubmit}>
-
+        <h3>Reach Out Today!</h3>
         <input
           placeholder='name'
           aria-label="Name"
@@ -49,6 +49,7 @@ function ContactForm() {
           required
         />
         <textarea
+          className='mb-5'
           id="message"
           name="message"
           placeholder='message'
@@ -56,7 +57,7 @@ function ContactForm() {
           onChange={handleChange}
           required
         />
-      <ButtonPrimary text='Contact Us'/>
+      <ButtonPrimary text='Get In Touch'/>
     </form>
   );
 }

@@ -1,51 +1,148 @@
-import acidWashingImageOne from '@/assets/images/acidWashing.jpg';
-import acidWashingImageTwo from '@/assets/images/cleanFireplace.jpg';
-import efflorescenseRemovalImageOne from '@/assets/images/efflorescenceRemoval.jpg';
+import acidWashingImage from '@/assets/images/acidWashing.jpg';
+import efflorescenseRemovalImage from '@/assets/images/efflorescenceRemoval.jpg';
+import waterBlastingImage from '@/assets/images/waterBlastingAndSteamCleaning.jpg';
+import waterproofCoatingsImage from '@/assets/images/waterproofCoatings.jpg';
+import masonrySealingImage from '@/assets/images/masonrySealing.jpg';
 
-const serviceData = [
-    {
+import industrialCoatingsImage from '@/assets/images/industrialCoatings.jpg';
+
+const serviceData = {
+    efflorescenceRemoval: {
         id: 1,
-        serviceName: 'acid washing',
-        description: `Queenstown's leading provider of acid washing services, excels in rejuvenating and enhancing the beauty of concrete surfaces for both residential and commercial settings. Our specialized acid washing, also known as acid etching, targets and eliminates deep-seated stains, grime, and the unsightly efflorescence—those persistent white salt deposits that can mar your property's visual appeal. Ideal for a wide range of applications, including driveways, patios, and pool decks, RTS's acid washing service ensures that your Queenstown property not only looks pristine but also sees an increase in its overall value.
-
-        What distinguishes RTS in the Queenstown market is our profound ability to not just cleanse concrete surfaces but to expertly prepare them for subsequent treatments. By effectively opening up the pores of the concrete, we enhance its texture, making it perfectly primed for the application of sealants, stains, and coatings. This crucial step guarantees a more attractive and durable finish, contributing to the longevity and resilience of your surfaces against the elements.
-        
-        Choosing RTS for your acid washing needs in Queenstown means entrusting your property to a team committed to achieving excellence. With our safe, efficient techniques and a keen eye for detail, we're dedicated to transforming your space into a cleaner, more inviting environment. Elevate the aesthetic and functional quality of your outdoor areas with RTS, and let us help protect and preserve your investment for years to come. Experience the unparalleled service that only RTS can provide, and take the first step towards a more beautiful, durable property today.
-        
-        `,
-        images: [acidWashingImageOne, acidWashingImageTwo]
-    },
-    {
-        id: 2,
         serviceName: 'efflorescence removal',
-        description: `Efflorescence removal from concrete or masonry surfaces is not just a matter of aesthetics; it's a crucial maintenance service that extends the lifespan and preserves the structural integrity of buildings. Efflorescence, a white powdery residue caused by water-soluble salts migrating to the surface, can indicate moisture issues that, if left untreated, may lead to more significant damage such as corrosion of reinforcement, spalling, and deterioration of the masonry. Removing efflorescence restores the pristine appearance of surfaces, enhancing the property's visual appeal and value. Moreover, it allows for the early detection of potential moisture ingress points, enabling timely waterproofing interventions. This proactive approach prevents the degradation of materials, ensuring that structures remain durable, safe, and visually pleasing for years to come. Lakeside Painting Limited offers specialized efflorescence removal services, employing the latest techniques and materials to protect and rejuvenate your property, ensuring it withstands the test of time and elements.`,
-        images: [efflorescenseRemovalImageOne]
-    }
-     ,
-    {
-        id: 3,
-        serviceName: 'power washing',
-        description: `Efflorescence removal from concrete or masonry surfaces is not just a matter of aesthetics; it's a crucial maintenance service that extends the lifespan and preserves the structural integrity of buildings. Efflorescence, a white powdery residue caused by water-soluble salts migrating to the surface, can indicate moisture issues that, if left untreated, may lead to more significant damage such as corrosion of reinforcement, spalling, and deterioration of the masonry. Removing efflorescence restores the pristine appearance of surfaces, enhancing the property's visual appeal and value. Moreover, it allows for the early detection of potential moisture ingress points, enabling timely waterproofing interventions. This proactive approach prevents the degradation of materials, ensuring that structures remain durable, safe, and visually pleasing for years to come. Lakeside Painting Limited offers specialized efflorescence removal services, employing the latest techniques and materials to protect and rejuvenate your property, ensuring it withstands the test of time and elements.`,
-        images: [efflorescenseRemovalImageOne]
+        serviceNameCamelCase: 'efflorescenceRemoval',
+        image: efflorescenseRemovalImage,
+        bulletPoints: [
+            {
+                bulletHeading: 'Expert Evaluation',
+                bulletDescription: 'Tailored assessments in Queenstown to identify the most effective efflorescence treatment for your property.'
+            },
+            {
+                bulletHeading: 'Advanced Cleaning',
+                bulletDescription: 'Our local experts use cutting-edge techniques to remove efflorescence without damaging your masonry.'
+            },
+            {
+                bulletHeading: 'Future Protection',
+                bulletDescription: "Optional sealing services to shield against water and prevent efflorescence reoccurrence, preserving your property's integrity.",
+            }
+        ]
     },
-    {
+    acidWashing: {
+        id: 2,
+        serviceName: 'acid washing',
+        serviceNameCamelCase: 'acidWashing',
+        image: acidWashingImage,
+        bulletPoints: [
+            {
+                bulletHeading: 'Safety First',
+                bulletDescription: 'Our Queenstown team conducts detailed assessments to guarantee the safe application of acid washing, prioritizing both site and material integrity.'
+            },
+            {
+                bulletHeading: 'Precision Application',
+                bulletDescription: 'Careful application of eco-friendly acidic solutions, specifically chosen for your masonry type to avoid any damage.'
+            },
+            {
+                bulletHeading: 'Expert Cleaning',
+                bulletDescription: "Detailed cleaning process using controlled acid washing methods to effectively remove unwanted residues and stains.",
+            },{
+                bulletHeading: 'Neutralization and Rinse',
+                bulletDescription: "Thorough neutralization of the acid followed by a meticulous rinse to ensure a clean, safe, and residue-free surface.",
+            }
+        ]
+    },
+    waterBlasting: {
+        id: 3,
+        serviceName: 'water blasting and steam cleaning',
+        serviceNameCamelCase: 'waterBlasting',
+        image: waterBlastingImage,
+        bulletPoints: [
+            {
+                bulletHeading: 'Initial Assessment',
+                bulletDescription: `Expert evaluation in Queenstown to tailor the cleaning strategy to your property's unique requirements.`
+            },
+            {
+                bulletHeading: 'Dual Cleaning Techniques',
+                bulletDescription: 'Strategic use of water blasting for heavy dirt and grime, followed by steam cleaning for delicate areas or tougher stains.'
+            },
+            {
+                bulletHeading: 'Quality Finish',
+                bulletDescription: "Detailed attention to ensure all areas are pristine, with a final inspection to guarantee client satisfaction.",
+            }
+        ]
+    },
+    waterproofCoatings: {
         id: 4,
         serviceName: 'waterproof coatings',
-        description: `Efflorescence removal from concrete or masonry surfaces is not just a matter of aesthetics; it's a crucial maintenance service that extends the lifespan and preserves the structural integrity of buildings. Efflorescence, a white powdery residue caused by water-soluble salts migrating to the surface, can indicate moisture issues that, if left untreated, may lead to more significant damage such as corrosion of reinforcement, spalling, and deterioration of the masonry. Removing efflorescence restores the pristine appearance of surfaces, enhancing the property's visual appeal and value. Moreover, it allows for the early detection of potential moisture ingress points, enabling timely waterproofing interventions. This proactive approach prevents the degradation of materials, ensuring that structures remain durable, safe, and visually pleasing for years to come. Lakeside Painting Limited offers specialized efflorescence removal services, employing the latest techniques and materials to protect and rejuvenate your property, ensuring it withstands the test of time and elements.`,
-        images: [efflorescenseRemovalImageOne]
+        serviceNameCamelCase: 'waterproofCoatings',
+        image: waterproofCoatingsImage,
+        bulletPoints: [
+            {
+                bulletHeading: 'Surface Assessment',
+                bulletDescription: `Our Queenstown experts conduct a detailed evaluation to pinpoint any issues and select the ideal waterproof coating for your specific surface, ensuring a tailored solution.`
+            },
+            {
+                bulletHeading: 'Surface Preparation',
+                bulletDescription: 'Cleaning and preparing the surface to ensure optimal adhesion of the waterproof coating, including the removal of any dirt, debris, or existing damaged coatings.'
+            },
+            {
+                bulletHeading: 'Precision Application',
+                bulletDescription: "Careful application of the waterproof coating using professional-grade equipment to ensure even coverage and maximum protection",
+            },
+            {
+                bulletHeading: 'Maintenance Guidance',
+                bulletDescription: "Providing expert advice on how to care for your newly coated surfaces to maximize the longevity and effectiveness of the waterproof barrier.",
+            }
+        ]
     },
-    {
+    masonrySealing: {
         id: 5,
-        serviceName: 'masonry sealing',
-        description: `Efflorescence removal from concrete or masonry surfaces is not just a matter of aesthetics; it's a crucial maintenance service that extends the lifespan and preserves the structural integrity of buildings. Efflorescence, a white powdery residue caused by water-soluble salts migrating to the surface, can indicate moisture issues that, if left untreated, may lead to more significant damage such as corrosion of reinforcement, spalling, and deterioration of the masonry. Removing efflorescence restores the pristine appearance of surfaces, enhancing the property's visual appeal and value. Moreover, it allows for the early detection of potential moisture ingress points, enabling timely waterproofing interventions. This proactive approach prevents the degradation of materials, ensuring that structures remain durable, safe, and visually pleasing for years to come. Lakeside Painting Limited offers specialized efflorescence removal services, employing the latest techniques and materials to protect and rejuvenate your property, ensuring it withstands the test of time and elements.`,
-        images: [efflorescenseRemovalImageOne]
+        serviceName: 'Concrete and Masonry Sealing',
+        serviceNameCamelCase: 'masonrySealing',
+        image: masonrySealingImage,
+        bulletPoints: [
+            {
+                bulletHeading: 'Comprehensive Sealing Solutions',
+                bulletDescription: 'Protect and prolong the life of your concrete and masonry in Queenstown with our superior sealing solutions. Ensure durability and resistance against environmental damage for driveways, patios, and more.'
+            },
+            {
+                bulletHeading: 'Customized Protection Plans',
+                bulletDescription: 'Offering customized protection plans tailored to your property’s needs. Our experts provide effective strategies for long-lasting durability and aesthetic preservation of your surfaces.'
+            },
+            {
+                bulletHeading: 'Advanced Sealant Application',
+                bulletDescription: 'Our Queenstown team uses eco-friendly sealants for deep protection against moisture and stains. Benefit from the latest technology for a barrier that keeps your concrete and masonry looking new.'
+            },
+            {
+                bulletHeading: 'Satisfaction Guaranteed',
+                bulletDescription: 'We prioritize your satisfaction with a commitment to excellence and meticulous attention to detail. Experience seamless service and lasting results. Contact us to safeguard your property.'
+            }
+        ]
     },
-    {
+    industrialCoatings: {
         id: 6,
         serviceName: 'industrial coatings',
-        description: `Efflorescence removal from concrete or masonry surfaces is not just a matter of aesthetics; it's a crucial maintenance service that extends the lifespan and preserves the structural integrity of buildings. Efflorescence, a white powdery residue caused by water-soluble salts migrating to the surface, can indicate moisture issues that, if left untreated, may lead to more significant damage such as corrosion of reinforcement, spalling, and deterioration of the masonry. Removing efflorescence restores the pristine appearance of surfaces, enhancing the property's visual appeal and value. Moreover, it allows for the early detection of potential moisture ingress points, enabling timely waterproofing interventions. This proactive approach prevents the degradation of materials, ensuring that structures remain durable, safe, and visually pleasing for years to come. Lakeside Painting Limited offers specialized efflorescence removal services, employing the latest techniques and materials to protect and rejuvenate your property, ensuring it withstands the test of time and elements.`,
-        images: [efflorescenseRemovalImageOne]
+        serviceNameCamelCase: 'industrialCoatings',
+        image: industrialCoatingsImage,
+        bulletPoints: [
+            {
+                bulletHeading: 'Detailed Site Assessment',
+                bulletDescription: 'Comprehensive examination of your facility to identify specific environmental challenges and surface requirements.'
+            },
+            {
+                bulletHeading: 'Custom Coating Selection',
+                bulletDescription: 'Based on the assessment, we select the most appropriate high-performance coatings to meet your operational needs, considering factors such as chemical exposure, abrasion resistance, and temperature fluctuations.'
+            },
+            {
+                bulletHeading: 'Professional Preparation and Application',
+                bulletDescription: `Thorough surface preparation to ensure optimal adhesion, followed by precise application of the industrial coatings using advanced techniques for a uniform and durable finish.`
+            },
+            {
+                bulletHeading: 'Stringent Quality Control',
+                bulletDescription: `Continuous monitoring and inspection throughout the application process to ensure the highest standards of quality and performance.
+                `
+            }
+        ]
     }
-]
+}
 
 export default serviceData;
