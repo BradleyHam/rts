@@ -95,10 +95,10 @@ const productData = {
         description: 'high performance penetrating masonry sealer',
         price: 10.00,
         cardBulletPoints: [
-            'Breathable Barrier',
-            'Preserve Aesthetics',
-            'Resist Weathering',
-            'Eco-Conscious Solution'
+            `Tailored for New Zealand's Diverse Climates`,
+            `Advanced Surface Treatment`,
+            `Enhanced Surface Longevity`,
+            `Invisible Protection`
         ],
         image: productImage_pavingProtect,
         productPageText: {
@@ -136,10 +136,10 @@ const productData = {
         description: 'high performance penetrating masonry sealer',
         price: 10.00,
         cardBulletPoints: [
-            'Breathable Barrier',
-            'Preserve Aesthetics',
-            'Resist Weathering',
-            'Eco-Conscious Solution'
+            'Color Enhancement',
+            `Superior Water Repellency`   ,
+            `Long-Lasting Protection`,
+            `Eco-Friendly`
         ],
         image: productImage_colorEnhancer,
         productPageText: {
@@ -177,10 +177,10 @@ const productData = {
         description: 'high performance penetrating masonry sealer',
         price: 10.00,
         cardBulletPoints: [
-            'Breathable Barrier',
-            'Preserve Aesthetics',
-            'Resist Weathering',
-            'Eco-Conscious Solution'
+            `Targeted Removal`,
+            `Gentle Yet Effective`,
+            `Eco-Conscious Choice`,
+            `User-Friendly Application`
         ],
         image: productImage_saltAway,
         productPageText: {
@@ -217,10 +217,10 @@ const productData = {
         description: 'high performance penetrating masonry sealer',
         price: 10.00,
         cardBulletPoints: [
-            'Breathable Barrier',
-            'Preserve Aesthetics',
-            'Resist Weathering',
-            'Eco-Conscious Solution'
+            `Targeted Cleaning Action`,
+            `Preserves Natural Look`,
+            `Eco-Friendly Formula`,
+            `Effortless Application`
         ],
         image: productImage_surfaceReviver,
         productPageText: {

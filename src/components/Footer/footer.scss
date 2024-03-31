@@ -28,12 +28,12 @@
     transform: scale(.9);
 }
 .bottom-footer{
-    margin: 0 $section-gutter-x--mobile;
-    padding: 20px 0;
+
+ 
     border-top: 1px solid rgba(255, 255, 255, 0.199);
     color: white;
     font-family: 'Montserrat';
     @include respond-to('lg'){
-        padding: 60px $section-gutter-x--desktop;
+        
     }
 }

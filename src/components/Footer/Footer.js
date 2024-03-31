@@ -18,7 +18,7 @@ function Footer() {
               </a> 
             </div>
         </div>
-        <div className='bottom-footer'>
+        <div className='bottom-footer mx-5 md:mx-10 lg:mx-20 py-10'>
         &copy; 2024 RTS Chemicals
         </div>
     </div>

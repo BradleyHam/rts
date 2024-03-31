@@ -3,24 +3,16 @@
 
 .product-page-header{
     background-color: $primary-color;
-    padding: $section-gutter-y--mobile $section-gutter-x--mobile;
     padding-top: calc($nav-height + 60px);
     
-   
     h1{
-        padding: $gap-lg 0;
-        margin-bottom: 0;
+       
     }
     h2{
         opacity: .9;
     }
   
-    @include respond-to('lg'){
-        display: flex;
-        gap: 80px;
-        padding: $section-gutter-y--mobile $section-gutter-x--desktop;
-        padding-top: calc($nav-height + 60px);
-    }
+ 
 }
 .text-heading-group{
     @include respond-to('lg'){
@@ -54,15 +46,9 @@
         margin-top: 0;
     }
 }
-.lisenced-in__image-group{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    gap: $gap-md;
-}
+
 .equus{
     // height: 100px;
-    transform: scale(.7);
-    margin: auto;
+    // transform: scale(.7);
+   
 }

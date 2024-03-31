@@ -7,7 +7,7 @@ function Service({serviceName}) {
   const currentServiceData = serviceData[serviceName]
 
   return (
-    <div id={serviceName} className='service-component pt-20'>
+    <div id={serviceName} className='service-component pt-20 pb-20'>
       
       <h3 className='service-heading'>
         {currentServiceData.serviceName}

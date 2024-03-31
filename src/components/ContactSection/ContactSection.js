@@ -9,13 +9,13 @@ import facebookIcon from '../../assets/images/facebook-svgrepo-com.svg';
 function ContactSection() {
   return (
     <section id='contact' className='contact-section pt-20'>
-        <div className='heading-container mb-10'>
+        <div className='heading-container'>
               <h2 className='h2-small'>Get in Touch</h2>
               <h2 className='h2-large'>Connect With Our Masonry Experts</h2> 
             </div>
        <div className='contact-information'>
           
-                <div className='contact-people'>
+                <div className='contact-people flex flex-col gap-5 pb-5'>
                     <ContactPerson name='callum smith' email='callum@rts.com' number='0226132926'/>
                     <ContactPerson name='liam turner' email='liam@rts.com' number='0226132996'/>
                     </div>   

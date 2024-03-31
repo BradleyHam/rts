@@ -12,8 +12,9 @@
         'image' 
         'list'
     ;
-    padding: $section-gutter-y--mobile $section-gutter-x--mobile;
-    padding-top: 120px;
+    padding: 120px $section-gutter-x--mobile;
+    
+    
     
     @include respond-to('lg'){
         display: grid;
