@@ -15,9 +15,9 @@ function ProductPageHeader() {
           </div>
           <div className='lisenced-in'>
         <h2 className='h2-small lisenced-in-h2'>lisenced in: </h2>
-          <div className='lisenced-in__image-group mt-5 flex flex-col space-y-6 items-start sm:flex-row sm:items-center sm:space-x-5 sm:space-y-0'>
-              <img className='equus max-h-[80px]' src={EquusImage} />
-              <img className='dulux max-h-[50px]' src={DuluxImage} />
+          <div className='lisenced-in__image-group mt-5 flex space-y-6 items-start flex-row space-x-5 sm:items-center sm:space-x-5 sm:space-y-0'>
+              <img className='equus max-h-[75px]' src={EquusImage} />
+              <img className='dulux max-h-[45px]' src={DuluxImage} />
           </div>
         </div>
     </div>
