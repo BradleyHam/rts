@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './contactForm.scss';
-import Button from '../ButtonPrimary/ButtonPrimary'
-import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
+import emailjs from 'emailjs-com';
+import { MdArrowOutward } from 'react-icons/md';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,6 +9,16 @@ function ContactForm() {
     email: '',
     message: '',
   });
+
+  const [formStatus, setFormStatus] = useState({
+    submitting: false,
+    message: '',
+  });
+
+  useEffect(() => {
+    // Replace 'YOUR_PUBLIC_KEY' with the actual Public Key from your EmailJS account
+    emailjs.init('ADEpi7IjLDhScCi10');
+  }, []); // The empty array ensures this effect runs only once
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,18 +28,43 @@ function ContactForm() {
     }));
   };
 
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/
+      );
+  };
+
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents the default form submission behavior
-    console.log('Form data submitted:', formData);
-    // Here you would typically send the form data to a server
-    // For example, using fetch() or axios to post the data
+    e.preventDefault();
+
+    if (!validateEmail(formData.email)) {
+      setFormStatus({ submitting: false, message: 'Please enter a valid email.' });
+      return;
+    }
+
+    setFormStatus({ submitting: true, message: '' });
+
+    emailjs.sendForm('service_blkcc7b', 'template_pserjkx', e.target, 'ADEpi7IjLDhScCi10')
+      .then((result) => {
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          }); // Reset form fields
+          setFormStatus({ submitting: false, message: 'Your message was sent successfully!' });
+      }, (error) => {
+          setFormStatus({ submitting: false, message: 'Failed to send your message. Please try again later.' });
+      });
   };
 
   return (
     <form className='contact-form' onSubmit={handleSubmit}>
         <h3>Reach Out Today!</h3>
         <input
-          placeholder='name'
+          className='text-white font-primary opacity-70'
+          placeholder='Your Name'
           aria-label="Name"
           type="text"
           id="name"
@@ -39,8 +74,9 @@ function ContactForm() {
           required
         />
         <input
-          placeholder='email'
-          aria-label="email"
+          className='text-white font-primary opacity-70'
+          placeholder='Your Email'
+          aria-label="Email"
           type="email"
           id="email"
           name="email"
@@ -49,15 +85,30 @@ function ContactForm() {
           required
         />
         <textarea
-          className='mb-5'
+          className='mb-5 text-white font-primary opacity-70'
           id="message"
           name="message"
-          placeholder='message'
+          placeholder='Your Message'
           value={formData.message}
           onChange={handleChange}
           required
         />
-      <ButtonPrimary text='Get In Touch'/>
+        <button
+          className='text-light font-primary flex space-x-2 items-center font-medium'
+          disabled={formStatus.submitting}
+        >
+          {formStatus.submitting ? (
+            <p className='text-[17px] font-medium'>Sending...</p>
+          ) : (
+            <>
+              <p className='text-[17px] font-medium'>Submit</p>
+              <MdArrowOutward />
+            </>
+          )}
+        </button>
+        {formStatus.message && (
+          <p className="form-status-message text-[17px] italic">{formStatus.message}</p>
+        )}
     </form>
   );
 }

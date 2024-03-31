@@ -9,6 +9,7 @@ h1{
     font-size: 20px;
     margin-bottom: $gap-sm;
     color: white;
+    line-height: 150%!important;
     @include respond-to('lg'){
         font-size: 32px;
     }

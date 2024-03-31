@@ -52,7 +52,7 @@ function ProductSection() {
         <ProductCard product={product} text={false}/>
         </div>
         <div className='product-text lg:max-w-[500px] xl:max-w-[800px]'>
-            <h3 className='text-xl mb-5'>{productPageText.heading}</h3>
+            <h3 className='text-2xl mb-5'>{productPageText.heading}</h3>
             <p className='text-[18px]'>{productPageText.topText}</p>
             <ul className='py-4 '>
             {
@@ -69,7 +69,7 @@ function ProductSection() {
          
               </div>
               <div className='pb-10'>
-              <ButtonPrimary text='Enquire Now'/>
+              <ButtonPrimary text='Enquire Now' toWhat='enquire about our products'/>
               </div>
             </div>
          

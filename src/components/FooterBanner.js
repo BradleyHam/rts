@@ -10,7 +10,7 @@ function FooterBanner() {
         <div className='absolute top-0 left-0 w-full h-full flex justify-center items-start p-5 md:px-10 lg:px-20 flex-col lg:flex-row lg:justify-between lg:items-center space-y-5'>
             <p className='text-light text-md md:text-xl lg:text-2xl font-primary font-bold'>Get in touch for a free consultation on how we can
             <br className='hidden md:block'/> <span className='italic opacity-80'> Preserve Your Masonary Investments! </span></p>
-            <ButtonPrimary text='Call Us Now'/>
+            <ButtonPrimary text='Call Us Now' toWhat='arrange a free consultation'/>
         </div>
     </section>
   )

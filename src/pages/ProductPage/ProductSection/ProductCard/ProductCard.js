@@ -24,7 +24,7 @@ function ProductCard({ product, text }) {
             <Link to={`/products/${slug}`}>
               <SecondaryButton text='Learn more'/>
             </Link>
-            <ButtonPrimary text='Enquire now'/>
+            <ButtonPrimary text='Enquire now' toWhat='enquire about our products'/>
           </div>
         </>
       )}

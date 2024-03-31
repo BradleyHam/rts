@@ -16,8 +16,8 @@ function ContactSection() {
        <div className='contact-information'>
           
                 <div className='contact-people flex flex-col gap-5 pb-5'>
-                    <ContactPerson name='callum smith' email='callum@rts.com' number='0226132926'/>
-                    <ContactPerson name='liam turner' email='liam@rts.com' number='0226132996'/>
+                    <ContactPerson name='Callum Mckenna' email='Callum@rtschemicals' number='027 507 0185'/>
+                    <ContactPerson name='Liam Turner' email='info@RTSChemicals.com' number='027 711 1711'/>
                     </div>   
                     <ContactForm />
        </div>

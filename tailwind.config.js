@@ -16,7 +16,7 @@ module.exports = {
       fontFamily: {
         'primary': ['Montserrat', 'sans-serif'],
         'headings': ['Poppins', 'sans-serif'],
-      },
+      }
     },
   },
   plugins: [],

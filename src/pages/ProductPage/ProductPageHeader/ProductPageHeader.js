@@ -9,7 +9,7 @@ function ProductPageHeader() {
     <div className='product-page-header px-5 md:px-10 pb-20 lg:flex lg:space-x-10 lg:px-20'>
         <div className='text-heading-group lg:pb-0'>
           <h2 className='h2-small'>Our Products</h2>
-          <h1 className='border-bottom mt-5 pb-10 text-2xl xl:text-3xl'>Explore Our Range of
+          <h1 className='border-bottom mt-5 pb-10 leading-normal text-2xl xl:text-3xl'>Explore Our Range of
           <br></br>Masonry, Concrete & 
           Brickwork Solutions</h1>
           </div>
