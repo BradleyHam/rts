@@ -18,7 +18,6 @@ function Services() {
             <Service serviceName='masonrySealing'/>
             <Service serviceName='industrialCoatings'/>
         </div>
-      
     </section>
   )
 }
