@@ -3,9 +3,6 @@ import './contactSection.scss';
 import ContactPerson from './ContactPerson';
 import ContactForm from '../../components/ContactForm/ContactForm';
 
-import instaIcon from '../../assets/images/instagram-svgrepo-com.svg';
-import facebookIcon from '../../assets/images/facebook-svgrepo-com.svg';
-
 function ContactSection() {
   return (
     <section id='contact' className='contact-section pt-20'>

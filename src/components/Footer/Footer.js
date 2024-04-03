@@ -12,7 +12,7 @@ function Footer() {
               <img src={logo} className='footer-logo' />
             </Link>
             <div className='socials'>
-                <a className='facebook' href='https://www.facebook.com/p/RTS-Masonry-Services-100077732815901/?paipv=0&eav=AfaLbdbqoV9JwQ66ZSyvBC5sK0qgOO5wZQ21IFpLltgSB8D3FoCwc5ppjzJdFVDJfQg&_rdr' >
+                <a className='facebook' href='https://www.facebook.com/profile.php?id=61556279065294&mibextid=qi2Omg&rdid=znh743H9o3lnaMpV' >
                     <img src={facebookIcon} alt='Facebook'></img>
                 </a>
                 <a className='instagram' href='https://www.instagram.com/rts_chemicals/'>
