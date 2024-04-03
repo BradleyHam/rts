@@ -9,7 +9,7 @@ import facebookIcon from '../../assets/images/facebook-svgrepo-com.svg';
 function ContactSection() {
   return (
     <section id='contact' className='contact-section pt-20'>
-        <div className='heading-container'>
+        <div className='heading-container mb-10'>
               <h2 className='h2-small'>Get in Touch</h2>
               <h2 className='h2-large'>Connect With Our Masonry Experts</h2> 
             </div>
