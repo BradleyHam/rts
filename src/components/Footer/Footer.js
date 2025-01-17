@@ -21,7 +21,18 @@ function Footer() {
             </div>
         </div>
         <div className='bottom-footer mx-5 md:mx-10 lg:mx-20 py-10'>
-        &copy; 2024 RTS Chemicals
+        &copy; 2025 RTS Chemicals
+        <p className='subfooter'>
+                  Developed by
+                  <a 
+                    href="https://www.envisionwebforge.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="portfolio-link"
+                  >
+                    Envision Web Forge
+                </a>
+                </p>
         </div>
     </div>
   )
